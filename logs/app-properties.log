@@ -1,0 +1,12 @@
+[INFO ] 17-04-2022 09:11:05 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 17-04-2022 09:11:05 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 17-04-2022 09:11:06 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 17-04-2022 09:11:06 [main] Log - Text url already is shown: /dashboard
+[INFO ] 17-04-2022 10:19:25 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 17-04-2022 10:19:25 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 17-04-2022 10:19:27 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 17-04-2022 10:19:27 [main] Log - Text url already is shown: /dashboard
+[INFO ] 17-04-2022 11:34:58 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 17-04-2022 11:34:58 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 17-04-2022 11:34:59 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 17-04-2022 11:34:59 [main] Log - Text url already is shown: /dashboard

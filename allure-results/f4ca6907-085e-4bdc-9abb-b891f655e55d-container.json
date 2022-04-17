@@ -1,1 +1,0 @@
-{"uuid":"f4ca6907-085e-4bdc-9abb-b891f655e55d","name":"com.huong.testcase.LoginTest","children":["a96cc293-d293-4a0c-bb8f-8907c2482099"],"befores":[{"name":"createDriver","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1650097466231,"stop":1650097466273}],"afters":[],"start":1650097466174,"stop":1650097473125}
