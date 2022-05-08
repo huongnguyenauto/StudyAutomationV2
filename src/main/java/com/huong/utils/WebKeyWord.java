@@ -1,29 +1,83 @@
 package com.huong.utils;
 
+import com.huong.constants.FrameworkConstants;
 import com.huong.driver.DriverManager;
+import com.huong.log.Log;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.text.MessageFormat;
+import java.time.Duration;
 
 public class WebKeyWord {
+
+    public static void sleep(double second){
+        try {
+            Thread.sleep((long) (second*1000));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void waitForPageLoaded() {
+
+        // wait for jQuery to loaded
+        ExpectedCondition<Boolean> jQueryLoad = driver -> {
+            try {
+                return ((Long) ((JavascriptExecutor) driver).executeScript("return jQuery.active") == 0);
+            } catch (Exception e) {
+                return true;
+            }
+        };
+
+        // wait for Javascript to loaded
+        ExpectedCondition<Boolean> jsLoad = driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState")
+                .toString().equals("complete");
+
+        try {
+            WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.WAIT_PAGE_LOAD), Duration.ofMillis(500));
+            wait.until(jQueryLoad);
+            wait.until(jsLoad);
+//            ExtentReportManager.info("Page loaded");
+//            AllureManager.saveTextLog("Page loaded");
+        } catch (Throwable error) {
+            Assert.fail("Quá thời gian load trang.");
+        }
+    }
+
+    public static boolean verifyCheckbox(By by){
+        boolean checkbox = DriverManager.getDriver().findElement(by).isSelected();
+        if (checkbox == true){
+            return true;
+        }else {
+            return false;
+        }
+
+    }
 
     public static void click(By by){
         DriverManager.getDriver().findElement(by).click();
         Log.info(MessageFormat.format("Click successfully {0}", by));
     }
 
-    public static void setText(By by, Object value){
+    public static void setText(By by, String value){
         try {
-            DriverManager.getDriver().findElement(by).sendKeys((CharSequence) value);
+            System.out.println(by);
+            System.out.println(value);
+            DriverManager.getDriver().findElement(by).sendKeys(value);
             Log.info(MessageFormat.format("SendKey successfully {0} ", by));
         }catch (Exception e){
             Log.error(MessageFormat.format("Not found element {0} ", by));
         }
     }
 
-    public boolean verifyUrl(String stringUrl){
+    public static boolean verifyUrl(String stringUrl){
         WebDriver driver = DriverManager.getDriver();
         try {
             String textUrlShow = driver.getCurrentUrl();

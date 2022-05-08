@@ -20,14 +20,12 @@ import org.testng.annotations.Test;
 
 public class LoginCrmTest extends BaseTest {
     LoginCrmPage loginCrmPage;
-    WebKeyWord action;
 
     public static String MESSAGE_ERRO = "//span[@id=\"password-error\"]";
 
     @BeforeClass
     public void createDriver(){
-        PropertiesHelper.setPropertiesFile();
-        action = new WebKeyWord();
+        PropertiesHelper.setDefaultFile();
     }
 
     @Test(description = "Sign in page")
@@ -35,13 +33,8 @@ public class LoginCrmTest extends BaseTest {
     @Description("Login successfully")
     public void TC01_loginTestWithUserPassCorrectCRM() throws InterruptedException {
         loginCrmPage = new LoginCrmPage();
-        loginCrmPage.LoginCRM(PropertiesHelper.getPropValue("USER_NAME"), PropertiesHelper.getPropValue("PASS_WORD"));
-        Assert.assertTrue(action.verifyUrl("/dashboard"));
+        loginCrmPage.LoginCRM(PropertiesHelper.getValue("USERNAME"), PropertiesHelper.getValue("PASSWORD"));
+        Assert.assertTrue(WebKeyWord.verifyUrl("/dashboard"));
     }
 
-//    public void TC02_loginWithUserIsCorrectPasswordBlank() throws InterruptedException {
-//        loginPage = new LoginPage();
-//        loginPage.LoginCRM(PropertiesHelper.getPropValue("USER_NAME"), PropertiesHelper.getPropValue(""));
-//        Assert.assertEquals(action.verifyGetText(MESSAGE_ERRO, "This field is required."));
-//    }
 }

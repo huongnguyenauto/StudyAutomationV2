@@ -1,23 +1,17 @@
 package com.huong.pages;
 
+import com.huong.constants.FrameworkConstants;
+import com.huong.driver.DriverManager;
 import com.huong.utils.WebKeyWord;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class CheckBoxPage {
 
-    By checkbox = By.xpath("//input[@id='isAgeSelected']");
-    WebKeyWord action;
-
-    public CheckBoxPage(){
-        action = new WebKeyWord();
-    }
+    By CHECKBOX = By.xpath("//input[@id='isAgeSelected']");
 
     public void checkbox(){
-        WebKeyWord.click(checkbox);
-
-
-
+        DriverManager.getDriver().get(FrameworkConstants.URL_DEMO);
+        WebKeyWord.click(CHECKBOX);
+        WebKeyWord.verifyCheckbox(CHECKBOX);
     }
-
 }

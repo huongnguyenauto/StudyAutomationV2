@@ -1,15 +1,13 @@
 package com.huong.driver;
 
-import com.huong.constants.FramworkConstants;
+import com.huong.constants.FrameworkConstants;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class BrowserFactory {
     //để phân loại khỏi tạo BrowserName
@@ -38,8 +36,8 @@ public class BrowserFactory {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FramworkConstants.WAIT_PAGE_LOAD));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(FramworkConstants.WAIT_PAGE_LOAD));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FrameworkConstants.WAIT_PAGE_LOAD));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(FrameworkConstants.WAIT_PAGE_LOAD));
         return driver;
     }
 
@@ -48,8 +46,8 @@ public class BrowserFactory {
         WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FramworkConstants.WAIT_PAGE_LOAD));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(FramworkConstants.WAIT_PAGE_LOAD));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FrameworkConstants.WAIT_PAGE_LOAD));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(FrameworkConstants.WAIT_PAGE_LOAD));
         return driver;
     }
 
@@ -58,8 +56,8 @@ public class BrowserFactory {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FramworkConstants.WAIT_PAGE_LOAD));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(FramworkConstants.WAIT_PAGE_LOAD));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(FrameworkConstants.WAIT_PAGE_LOAD));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(FrameworkConstants.WAIT_PAGE_LOAD));
         return driver;
     }
 

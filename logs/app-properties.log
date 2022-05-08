@@ -10,3 +10,136 @@
 [INFO ] 17-04-2022 11:34:58 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
 [INFO ] 17-04-2022 11:34:59 [main] Log - Click successfully By.xpath: //button[@type='submit']
 [INFO ] 17-04-2022 11:34:59 [main] Log - Text url already is shown: /dashboard
+[INFO ] 23-04-2022 16:01:40 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 23-04-2022 16:01:40 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 23-04-2022 16:01:40 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 23-04-2022 16:01:40 [main] Log - Text url already is shown: /dashboard
+[INFO ] 23-04-2022 16:27:32 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 23-04-2022 16:27:32 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 23-04-2022 16:27:33 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 23-04-2022 16:27:33 [main] Log - Text url already is shown: /dashboard
+[INFO ] 23-04-2022 17:04:51 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 23-04-2022 17:04:52 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 23-04-2022 17:04:52 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 23-04-2022 17:04:52 [main] Log - Text url already is shown: /dashboard
+[INFO ] 23-04-2022 17:07:07 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 23-04-2022 17:07:07 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 23-04-2022 17:07:08 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 23-04-2022 17:07:08 [main] Log - Text url already is shown: /dashboard
+[INFO ] 23-04-2022 18:07:13 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 23-04-2022 18:07:13 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 23-04-2022 18:07:13 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 23-04-2022 18:07:13 [main] Log - Text url already is shown: /dashboard
+[INFO ] 23-04-2022 18:10:53 [main] Log - Click successfully By.xpath: //input[@id='isAgeSelected']
+[INFO ] 23-04-2022 18:11:35 [main] Log - Click successfully By.xpath: //input[@id='isAgeSelected']
+[INFO ] 23-04-2022 18:11:58 [main] Log - Click successfully By.xpath: //input[@id='isAgeSelected']
+[INFO ] 07-05-2022 20:55:32 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 07-05-2022 20:55:32 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 07-05-2022 20:55:33 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 07-05-2022 20:55:33 [main] Log - Text url already is shown: /dashboard
+[ERROR] 07-05-2022 21:13:33 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[ERROR] 07-05-2022 21:13:33 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 07-05-2022 21:13:33 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 07-05-2022 21:13:49 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 07-05-2022 21:13:49 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 07-05-2022 21:13:50 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 07-05-2022 21:13:50 [main] Log - Text url already is shown: /dashboard
+[INFO ] 08-05-2022 09:30:58 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 09:30:58 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 09:30:58 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 09:30:58 [main] Log - Text url already is shown: /dashboard
+[INFO ] 08-05-2022 10:14:42 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 10:14:42 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 10:14:42 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 10:14:42 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 10:14:42 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 10:14:42 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 10:19:03 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 10:19:03 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 10:19:03 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 10:19:03 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 10:19:03 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 10:19:03 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 10:24:31 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 10:24:31 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 10:24:31 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 10:24:31 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 10:24:31 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 10:24:31 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 10:27:40 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 10:27:40 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 10:27:40 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 10:27:40 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 10:27:40 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 10:27:41 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 10:28:17 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 10:28:17 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 10:28:17 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 10:28:17 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 10:28:17 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 10:28:17 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 11:04:54 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 11:04:54 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 11:04:54 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[INFO ] 08-05-2022 11:04:54 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 11:04:55 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 11:04:55 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 11:04:55 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 16:42:50 [main] Log - Click successfully By.xpath: //span[contains(text(),"Select a Category")]
+[INFO ] 08-05-2022 16:42:50 [main] Log - SendKey successfully By.xpath: (//div[@class='chosen-search']//input)[3] 
+[INFO ] 08-05-2022 16:43:28 [main] Log - Click successfully By.xpath: //span[contains(text(),"Select a Category")]
+[INFO ] 08-05-2022 16:43:30 [main] Log - SendKey successfully By.xpath: (//div[@class='chosen-search']//input)[3] 
+[INFO ] 08-05-2022 16:48:33 [main] Log - Click successfully By.xpath: //span[contains(text(),"Select a Category")]
+[INFO ] 08-05-2022 16:48:35 [main] Log - SendKey successfully By.xpath: (//div[@class='chosen-search']//input)[3] 
+[INFO ] 08-05-2022 16:52:40 [main] Log - Click successfully By.xpath: //span[contains(text(),"Select a Category")]
+[INFO ] 08-05-2022 16:52:42 [main] Log - SendKey successfully By.xpath: (//div[@class='chosen-search']//input)[3] 
+[INFO ] 08-05-2022 16:52:44 [main] Log - Click successfully By.xpath: //li[normalize-space()='Shops']
+[INFO ] 08-05-2022 16:53:17 [main] Log - Click successfully By.xpath: //span[contains(text(),"Select a Category")]
+[INFO ] 08-05-2022 16:53:19 [main] Log - SendKey successfully By.xpath: (//div[@class='chosen-search']//input)[3] 
+[INFO ] 08-05-2022 16:53:21 [main] Log - Click successfully By.xpath: //li[normalize-space()='Shops']
+[INFO ] 08-05-2022 20:01:26 [main] Log - Click successfully By.xpath: //span[contains(text(),"Select a Category")]
+[INFO ] 08-05-2022 20:01:28 [main] Log - SendKey successfully By.xpath: (//div[@class='chosen-search']//input)[3] 
+[INFO ] 08-05-2022 20:01:30 [main] Log - Click successfully By.xpath: //li[normalize-space()='Shops']
+[INFO ] 08-05-2022 20:10:50 [main] Log - Click successfully By.xpath: //span[contains(text(),"Select a Category")]
+[INFO ] 08-05-2022 20:10:52 [main] Log - SendKey successfully By.xpath: (//div[@class='chosen-search']//input)[3] 
+[INFO ] 08-05-2022 20:10:54 [main] Log - Click successfully By.xpath: //li[normalize-space()='Shops']
+[INFO ] 08-05-2022 20:11:15 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 20:11:15 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 20:11:15 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 20:11:15 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 20:11:15 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 20:11:15 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 20:12:15 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 20:12:15 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 20:12:15 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 20:12:15 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 20:12:15 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 20:12:15 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 20:23:37 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 20:23:37 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 20:23:37 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 20:23:37 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 20:23:37 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 20:23:37 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 20:34:24 [main] Log - Loaded all properties files.
+[INFO ] 08-05-2022 20:34:27 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[INFO ] 08-05-2022 20:34:27 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 20:34:27 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[INFO ] 08-05-2022 20:34:27 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 20:34:27 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 20:34:28 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 20:34:28 [main] Log - Text url already is shown: /dashboard
+[INFO ] 08-05-2022 20:35:59 [main] Log - Loaded all properties files.
+[INFO ] 08-05-2022 20:36:02 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[INFO ] 08-05-2022 20:36:02 [main] Log - SendKey successfully By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 20:36:02 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[INFO ] 08-05-2022 20:36:02 [main] Log - SendKey successfully By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 20:36:02 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 20:36:03 [main] Log - Click successfully By.xpath: //button[@type='submit']
+[INFO ] 08-05-2022 20:36:03 [main] Log - Text url already is shown: /dashboard
+[INFO ] 08-05-2022 20:36:35 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='email']' from the object repository
+[ERROR] 08-05-2022 20:36:35 [main] Log - Not found element By.xpath: //input[@id='email'] 
+[INFO ] 08-05-2022 20:36:35 [main] Log - Retrieving object of type 'xpath' and value '//input[@id='password']' from the object repository
+[ERROR] 08-05-2022 20:36:35 [main] Log - Not found element By.xpath: //input[@id='password'] 
+[INFO ] 08-05-2022 20:36:35 [main] Log - Retrieving object of type 'xpath' and value '//button[@type='submit']' from the object repository
+[INFO ] 08-05-2022 20:36:35 [main] Log - Click successfully By.xpath: //button[@type='submit']

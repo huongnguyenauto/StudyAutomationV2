@@ -1,7 +1,6 @@
 package com.huong.listeners;
 
-import com.huong.common.BaseTest;
-import com.huong.utils.Log;
+import com.huong.log.Log;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

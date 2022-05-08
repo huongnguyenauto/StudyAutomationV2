@@ -1,65 +1,105 @@
 package com.huong.helpers;
 
+import com.huong.log.Log;
+import io.qameta.allure.Step;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.LinkedList;
 import java.util.Properties;
 
 public class PropertiesHelper {
 
     private static Properties properties;
-    private static FileInputStream fileIn;
-    private static FileOutputStream fileOut;
+    private static String linkFile;
+    private static FileInputStream file;
+    private static FileOutputStream out;
+    private static String relPropertiesFilePathDefault = "src/test/resources/loginlocator.properties";
 
-    //Lấy đường dẫn đến project hiện tại
-    static String projectPath = System.getProperty("user.dir") + "/";
-    //Tạo đường dẫn đến file login.properties mặc định
-    private static String propertiesFilePathRoot = "src/test/resources/login.properties";
+    @Step("Loaded all properties files")
+    public static Properties loadAllFiles() {
+        LinkedList<String> files = new LinkedList<>();
+        // Add tất cả file Properties vào đây theo mẫu
+        files.add("src/test/resources/loginlocator.properties");
+        files.add("src/test/resources/login.properties");
 
+        try {
+            properties = new Properties();
 
-    public static void setPropertiesFile() {
+            for (String f : files) {
+                Properties tempProp = new Properties();
+                linkFile = Helpers.getCurrentDir() + f;
+                file = new FileInputStream(linkFile);
+                tempProp.load(file);
+                properties.putAll(tempProp);
+            }
+            Log.info("Loaded all properties files.");
+            return properties;
+        } catch (IOException ioe) {
+            return new Properties();
+        }
+    }
+
+    public static void setFile(String relPropertiesFilePath) {
         properties = new Properties();
         try {
-            //Khởi tạo giá trị cho đối tượng của class FileInputStream
-            fileIn = new FileInputStream(projectPath + propertiesFilePathRoot);
-            //Load properties file
-            properties.load(fileIn);
+            linkFile = Helpers.getCurrentDir() + relPropertiesFilePath;
+            file = new FileInputStream(linkFile);
+            properties.load(file);
+            file.close();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println(e.getCause());
             e.printStackTrace();
         }
     }
 
-    //Xây dựng hàm Get Value từ Key của file properties đã setup bên trên
-    public static String getPropValue(String KeyProp) {
-        String value = null;
+    public static void setDefaultFile() {
+        properties = new Properties();
         try {
-            //get values from properties file
-            value = properties.getProperty(KeyProp);
-            System.out.println(value);
-            return value;
+            linkFile = Helpers.getCurrentDir() + relPropertiesFilePathDefault;
+            file = new FileInputStream(linkFile);
+            properties.load(file);
+            file.close();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println(e.getCause());
             e.printStackTrace();
         }
-        return value;
     }
 
-    //Xây dựng hàm Set Value với Key tương ứng vào trong file properties đã setup bên trên
-    public static void setPropValue(String KeyProp, String Value) {
+    public static String getValue(String key) {
+        String keyval = null;
         try {
-            //Khởi tạo giá trị cho đối tượng của class FileOutputStream
-            fileOut = new FileOutputStream(projectPath + propertiesFilePathRoot);
-            //Load properties file hiện tại và thực hiện mapping value với key tương ứng
-            properties.setProperty(KeyProp, Value);
-            //Lưu key và value vào properties file
-            properties.store(fileOut, "Set new value in properties file");
-            System.out.println("Set new value in file properties success.");
+            if (file == null) {
+                properties = new Properties();
+                linkFile = Helpers.getCurrentDir() + relPropertiesFilePathDefault; //Read default file
+                file = new FileInputStream(linkFile);
+                properties.load(file);
+                file.close();
+            }
+            // Lấy giá trị từ file đã Set
+            keyval = properties.getProperty(key);
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            System.out.println(e.getCause());
-            e.printStackTrace();
+        }
+        return keyval;
+    }
+
+    public static void setValue(String key, String keyValue) {
+        try {
+            if (file == null) {
+                properties = new Properties();
+                file = new FileInputStream(Helpers.getCurrentDir() + relPropertiesFilePathDefault);
+                properties.load(file);
+                file.close();
+                out = new FileOutputStream(Helpers.getCurrentDir() + relPropertiesFilePathDefault);
+            }
+            //Ghi vào cùng file Prop với file lấy ra
+            out = new FileOutputStream(linkFile);
+            System.out.println(linkFile);
+            properties.setProperty(key, keyValue);
+            properties.store(out, null);
+            out.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
