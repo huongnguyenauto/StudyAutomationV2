@@ -20,10 +20,9 @@ public class ObjectUtil {
             }
         }
 
-
         // extract the locator type and value from the object
-        String locatorType = locator.split(":")[0].trim();
-        String locatorValue = locator.split(":")[1].trim();
+        String locatorType = locator.split(":")[0];
+        String locatorValue = locator.split(":")[1];
 
         Log.info("Retrieving object of type '" + locatorType + "' and value '" + locatorValue + "' from the object repository");
 
@@ -53,4 +52,32 @@ public class ObjectUtil {
             }
         return null;
     }
+
+
+    /**
+     * Receives a wildcard string, replace the wildcard with the value and return to the caller
+     *
+     * @param xpath Xpath with wildcard string
+     * VD: //a[text()='%s']   =>  %s is String, %d is int
+     * @param value value to be replaced in place of wildcard
+     * @return dynamic xpath string
+     * @author Anh Tester
+     */
+    public static String getXpath(String xpath, String value) {
+        return String.format(xpath, value);
+    }
+
+    /**
+     * Receives a wildcard string, replace the wildcard with the value and return to the caller
+     *
+     * @param xpath  Xpath with wildcard string
+     * @param value1 value to be replaced in place of wildcard
+     * @param value2 value to be replaced in place of wildcard
+     * @return dynamic xpath string
+     * @author Anh Tester
+     */
+    public static String getXpath(String xpath, String value1, String value2) {
+        return String.format(xpath, value1, value2);
+    }
+
 }

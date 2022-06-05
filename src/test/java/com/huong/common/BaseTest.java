@@ -8,9 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.util.HashMap;
+
 public class BaseTest {
 
     static WebDriver driver;
+    private HashMap<String, String> repoFile;
 
 
     @BeforeMethod
@@ -20,8 +23,10 @@ public class BaseTest {
         PropertiesHelper.loadAllFiles();
     }
 
-    @AfterMethod
-    public void cloaseBrowser(){
-        DriverManager.quit();
-    }
+//    @AfterMethod
+//    public void cloaseBrowser(){
+//        DriverManager.quit();
+//    }
+
+
 }

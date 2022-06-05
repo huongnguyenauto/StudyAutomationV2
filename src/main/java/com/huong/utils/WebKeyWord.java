@@ -3,7 +3,6 @@ package com.huong.utils;
 import com.huong.constants.FrameworkConstants;
 import com.huong.driver.DriverManager;
 import com.huong.log.Log;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +15,7 @@ import java.text.MessageFormat;
 import java.time.Duration;
 
 public class WebKeyWord {
+
 
     public static void sleep(double second){
         try {
@@ -91,7 +91,7 @@ public class WebKeyWord {
         return false;
     }
 
-    public String verifyGetText(String locator, String text){
+    public static String verifyGetText(String locator, String text){
         WebDriver driver = DriverManager.getDriver();
         String textError = null;
         WebElement we = driver.findElement(By.xpath(locator));
@@ -103,6 +103,36 @@ public class WebKeyWord {
             Log.info(MessageFormat.format("Text of {0} not the same get text {1} ", locator, text));
         }
        return textError;
+    }
+
+    public static String getText(By by){
+        WebDriver driver = DriverManager.getDriver();
+        String textError = null;
+        WebElement we = driver.findElement(by);
+        try {
+            textError = we.getText();
+            Log.info(MessageFormat.format("Text of {0} is the same {1}", we));
+
+        }catch (Exception e){
+            Log.info(MessageFormat.format("Text of {0} not the same get text {1} ", we));
+        }
+        return textError;
+    }
+
+    public static boolean verifyText(String text){
+        WebDriver driver = DriverManager.getDriver();
+        String textMessage = null;
+        WebElement we = driver.findElement(By.xpath(String.valueOf(text)));
+        try {
+            textMessage = we.getText();
+            Log.info(MessageFormat.format("abcd", we));
+            if (textMessage.contains(text)){
+                return true;
+            }
+        }catch (Exception e){
+
+        }
+        return false;
     }
 
 }
