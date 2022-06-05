@@ -17,9 +17,14 @@ import java.time.Duration;
 public class WebKeyWord {
 
 
-    public static void sleep(double second){
+    /**
+     * Hàm này dùng để chờ đợi khoảng thời gian cố định. Đơn vị Giây
+     *
+     * @param second là đơn vị giây cần chờ đợi
+     */
+    public static void sleep(double second) {
         try {
-            Thread.sleep((long) (second*1000));
+            Thread.sleep((long) (second * 1000));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -51,47 +56,58 @@ public class WebKeyWord {
         }
     }
 
-    public static boolean verifyCheckbox(By by){
+    public static boolean verifyCheckbox(By by) {
         boolean checkbox = DriverManager.getDriver().findElement(by).isSelected();
-        if (checkbox == true){
+        if (checkbox == true) {
             return true;
-        }else {
+        } else {
             return false;
         }
 
     }
 
-    public static void click(By by){
+    public static void click(By by) {
         DriverManager.getDriver().findElement(by).click();
         Log.info(MessageFormat.format("Click successfully {0}", by));
     }
 
-    public static void setText(By by, String value){
+    public static void setText(By by, String value) {
         try {
             System.out.println(by);
             System.out.println(value);
             DriverManager.getDriver().findElement(by).sendKeys(value);
             Log.info(MessageFormat.format("SendKey successfully {0} ", by));
-        }catch (Exception e){
+        } catch (Exception e) {
             Log.error(MessageFormat.format("Not found element {0} ", by));
         }
     }
 
-    public static boolean verifyUrl(String stringUrl){
+    public static void setText(By by, String value, String elementName) {
+        try {
+            System.out.println(by);
+            System.out.println(value);
+            DriverManager.getDriver().findElement(by).sendKeys(value);
+            Log.info(MessageFormat.format("SendKey successfully {0} ", elementName));
+        } catch (Exception e) {
+            Log.error(MessageFormat.format("Not found element {0} ", elementName));
+        }
+    }
+
+    public static boolean verifyUrl(String stringUrl) {
         WebDriver driver = DriverManager.getDriver();
         try {
             String textUrlShow = driver.getCurrentUrl();
-            if (textUrlShow.contains(stringUrl)){
-                Log.info(MessageFormat.format("Text url already is shown: {0}",stringUrl));
+            if (textUrlShow.contains(stringUrl)) {
+                Log.info(MessageFormat.format("Text url already is shown: {0}", stringUrl));
                 return true;
             }
-        }catch (Exception e){
-            Log.error(MessageFormat.format("Not found text url is not correct: {0}",stringUrl));
+        } catch (Exception e) {
+            Log.error(MessageFormat.format("Not found text url is not correct: {0}", stringUrl));
         }
         return false;
     }
 
-    public static String verifyGetText(String locator, String text){
+    public static String verifyGetText(String locator, String text) {
         WebDriver driver = DriverManager.getDriver();
         String textError = null;
         WebElement we = driver.findElement(By.xpath(locator));
@@ -99,37 +115,37 @@ public class WebKeyWord {
             textError = we.getText();
             Log.info(MessageFormat.format("Text of {0} is the same {1}", locator, text));
 
-        }catch (Exception e){
+        } catch (Exception e) {
             Log.info(MessageFormat.format("Text of {0} not the same get text {1} ", locator, text));
         }
-       return textError;
+        return textError;
     }
 
-    public static String getText(By by){
-        WebDriver driver = DriverManager.getDriver();
+    public static String getText(By by) {
+        System.out.println(by);
         String textError = null;
-        WebElement we = driver.findElement(by);
+        WebElement we = DriverManager.getDriver().findElement(by);
         try {
             textError = we.getText();
-            Log.info(MessageFormat.format("Text of {0} is the same {1}", we));
+            Log.info(MessageFormat.format("Text of {0} is the same {1}", we, textError));
 
-        }catch (Exception e){
+        } catch (Exception e) {
             Log.info(MessageFormat.format("Text of {0} not the same get text {1} ", we));
         }
         return textError;
     }
 
-    public static boolean verifyText(String text){
+    public static boolean verifyText(By by, String text) {
         WebDriver driver = DriverManager.getDriver();
         String textMessage = null;
-        WebElement we = driver.findElement(By.xpath(String.valueOf(text)));
+        WebElement we = driver.findElement(by);
         try {
             textMessage = we.getText();
-            Log.info(MessageFormat.format("abcd", we));
-            if (textMessage.contains(text)){
+            Log.info(MessageFormat.format("The text of element " + by + " is {0}", textMessage));
+            if (textMessage.contains(text)) {
                 return true;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
         return false;

@@ -7,7 +7,11 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import testobject.ObjectUtil;
+
+import java.time.Duration;
 
 public class AlertPage {
 
@@ -34,14 +38,21 @@ public class AlertPage {
 
         WebKeyWord.click(ObjectUtil.getLocator("BTN_ALERT_CLICK"));
 
+        WebKeyWord.sleep(2);
+
+        //Viết hàm wait cái Alert xuất hiện (Exist)
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10), Duration.ofMillis(500));
+        wait.until(ExpectedConditions.alertIsPresent());
+
         Alert alert = driver.switchTo().alert();
         alert.sendKeys(value01);
+        WebKeyWord.sleep(1);
         alert.accept();
     }
 
     public boolean verifyTextAlert(){
         String actualText = WebKeyWord.getText(ObjectUtil.getLocator("LBL_MESSAGE_RESULT"));
-        if (WebKeyWord.verifyText(actualText)){
+        if (WebKeyWord.verifyText(ObjectUtil.getLocator("LBL_MESSAGE_RESULT"), actualText)){
             return true;
         }
         return false;

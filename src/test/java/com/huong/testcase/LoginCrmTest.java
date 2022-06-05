@@ -21,16 +21,15 @@ import org.testng.annotations.Test;
 public class LoginCrmTest extends BaseTest {
     LoginCrmPage loginCrmPage;
 
-    public static String MESSAGE_ERRO = "//span[@id=\"password-error\"]";
+    public static String MESSAGE_ERRO = "//span[@id='password-error']";
 
     @BeforeClass
     public void createDriver(){
         PropertiesHelper.setDefaultFile();
     }
 
-    @Test(description = "Sign in page")
+    @Test
     @Step("Sign in page to CRM system")
-    @Description("Login successfully")
     public void TC01_loginTestWithUserPassCorrectCRM() throws InterruptedException {
         loginCrmPage = new LoginCrmPage();
         loginCrmPage.LoginCRM(PropertiesHelper.getValue("USERNAME"), PropertiesHelper.getValue("PASSWORD"));
