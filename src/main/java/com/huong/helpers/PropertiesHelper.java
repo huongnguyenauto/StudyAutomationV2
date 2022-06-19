@@ -22,11 +22,14 @@ public class PropertiesHelper {
         LinkedList<String> files = new LinkedList<>();
         // Add tất cả file Properties vào đây theo mẫu
         files.add("src/test/resources/alertlocator.properties");
+        files.add("src/test/resources/alertlocator.properties");
         files.add("src/test/resources/loginlocator.properties");
         files.add("src/test/resources/login.properties");
         files.add("src/test/resources/alertvalue.properties");
         files.add("src/test/resources/popupwindowlocator.properties");
         files.add("src/test/resources/popupvalue.properties");
+        files.add("src/test/resources/logingurevalue.properties");
+        files.add("src/test/resources/logingurulocator.properties");
 
         try {
             properties = new Properties();

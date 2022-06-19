@@ -24,7 +24,7 @@ public class ObjectUtil {
         String locatorType = locator.split(":")[0];
         String locatorValue = locator.split(":")[1];
 
-        Log.info("Retrieving object of type '" + locatorType + "' and value '" + locatorValue + "' from the object repository");
+//        Log.info("Retrieving object of type '" + locatorType + "' and value '" + locatorValue + "' from the object repository");
 
         // Trả về một thể hiện của lớp By dựa trên loại định vị (id, name, xpath, css,...)
         // Đối tượng By có thể được sử dụng bởi driver.findElement (WebElement)
@@ -53,17 +53,50 @@ public class ObjectUtil {
         return null;
     }
 
+    public static String getElementNameFromLocator(String elementName) {
+
+        // retrieve the specified object from the object list in properties file
+        String locator = PropertiesHelper.getValue(elementName);
+
+        if (locator.equals("") || locator.isEmpty()) {
+            Log.info("The Locator " + elementName + " does not exist !!");
+            try {
+                throw new Exception("The Locator " + elementName + " does not exist !!");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        // extract the locator type and value from the object
+        String objectName = locator.split(":")[2];
+
+        if (objectName == null || objectName.equals("")) {
+            try{
+                throw new Exception("The Object Name is null.");
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }else {
+            Log.info("Get object '" + objectName + "' from locator '" + elementName + "' in the object repository");
+
+            return objectName;
+        }
+
+
+        return null;
+    }
+
 
     /**
      * Receives a wildcard string, replace the wildcard with the value and return to the caller
      *
      * @param xpath Xpath with wildcard string
-     * VD: //a[text()='%s']   =>  %s is String, %d is int
+     *              VD: //a[text()='%s']   =>  %s is String, %d is int
      * @param value value to be replaced in place of wildcard
      * @return dynamic xpath string
      * @author Anh Tester
      */
-    public static String getXpath(String xpath, String value) {
+    public static String getXpathDynamic(String xpath, String value) {
         return String.format(xpath, value);
     }
 
@@ -71,13 +104,12 @@ public class ObjectUtil {
      * Receives a wildcard string, replace the wildcard with the value and return to the caller
      *
      * @param xpath  Xpath with wildcard string
-     * @param value1 value to be replaced in place of wildcard
-     * @param value2 value to be replaced in place of wildcard
+     * @param value value to be replaced in place of wildcard
      * @return dynamic xpath string
      * @author Anh Tester
      */
-    public static String getXpath(String xpath, String value1, String value2) {
-        return String.format(xpath, value1, value2);
+    public static String getXpathDynamic(String xpath, Object... value) {
+        return String.format(xpath, value);
     }
 
 }

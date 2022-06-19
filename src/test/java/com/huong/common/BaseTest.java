@@ -23,10 +23,10 @@ public class BaseTest {
         PropertiesHelper.loadAllFiles();
     }
 
-//    @AfterMethod
-//    public void cloaseBrowser(){
-//        DriverManager.quit();
-//    }
-
-
+    @AfterMethod
+    public void cloaseBrowser(){
+        if (DriverManager.getDriver() != null){
+            DriverManager.quit();
+        }
+    }
 }
