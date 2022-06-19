@@ -4,11 +4,9 @@ import com.huong.common.BaseTest;
 import com.huong.driver.DriverManager;
 import com.huong.helpers.PropertiesHelper;
 import com.huong.pages.PopupWindownPage;
-import com.huong.utils.WebKeyWord;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import testobject.ObjectUtil;
 
 public class PopupWindowTest extends BaseTest {
 

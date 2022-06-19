@@ -24,7 +24,7 @@ public class ObjectUtil {
         String locatorType = locator.split(":")[0];
         String locatorValue = locator.split(":")[1];
 
-        Log.info("Retrieving object of type '" + locatorType + "' and value '" + locatorValue + "' from the object repository");
+//        Log.info("Retrieving object of type '" + locatorType + "' and value '" + locatorValue + "' from the object repository");
 
         // Trả về một thể hiện của lớp By dựa trên loại định vị (id, name, xpath, css,...)
         // Đối tượng By có thể được sử dụng bởi driver.findElement (WebElement)

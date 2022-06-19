@@ -1,17 +1,14 @@
+
 package com.huong.testcase;
 
-import com.google.common.collect.LinkedListMultimap;
 import com.huong.common.BaseTest;
 import com.huong.driver.DriverManager;
 import com.huong.helpers.PropertiesHelper;
 import com.huong.pages.AlertPage;
-import com.huong.utils.WebKeyWord;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import com.huong.utils.WebKeyWordOld;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import testobject.ObjectUtil;
 
 public class CloseAlertTest extends BaseTest {
 

@@ -2,9 +2,8 @@ package com.huong.pages;
 
 import com.huong.constants.FrameworkConstants;
 import com.huong.driver.DriverManager;
-import com.huong.utils.WebKeyWord;
+import com.huong.utils.WebKeyWordOld;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import testobject.ObjectUtil;
 
@@ -17,9 +16,9 @@ PopupWindownPage {
     public void handlerPopupWindow(String text) throws InterruptedException {
         driver = DriverManager.getDriver();
         DriverManager.getDriver().get(FrameworkConstants.URL_DEMO_POPUPWINDOWN);
-        WebKeyWord.waitForPageLoaded();
+        WebKeyWordOld.waitForPageLoaded();
 
-        WebKeyWord.click(ObjectUtil.getLocator("LBL_CLICK"));
+        WebKeyWordOld.click(ObjectUtil.getLocator("LBL_CLICK"));
 
         String mainWindow = driver.getWindowHandle();
         System.out.println(mainWindow);
@@ -33,10 +32,10 @@ PopupWindownPage {
                 Thread.sleep(3000);
                 System.out.println("Đã switch sang child window");
 
-                WebKeyWord.setText(ObjectUtil.getLocator("TXT_TEXTBOX"), text);
-                WebKeyWord.click(ObjectUtil.getLocator("BTN_SUBMIT"));
+                WebKeyWordOld.setText(ObjectUtil.getLocator("TXT_TEXTBOX"), text);
+                WebKeyWordOld.click(ObjectUtil.getLocator("BTN_SUBMIT"));
 
-                String textResponse = WebKeyWord.getText(ObjectUtil.getLocator("TEXT_APPEAR"));
+                String textResponse = WebKeyWordOld.getText(ObjectUtil.getLocator("TEXT_APPEAR"));
                 Assert.assertEquals(textResponse, "Access details to demo site.");
 
                 driver.close();

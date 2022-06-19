@@ -1,3 +1,4 @@
+
 package com.huong.pages;
 
 import com.huong.constants.FrameworkConstants;
@@ -7,11 +8,12 @@ import testobject.ObjectUtil;
 
 public class LoginCrmPage {
 
-    public void  LoginCRM(String user, String password){
-        DriverManager.getDriver().get(FrameworkConstants.URL_PAGE);
+    public void loginCrm(String username, String password){
+        DriverManager.getDriver().get(FrameworkConstants.URL_PAGE_CRM);
         WebKeyWord.waitForPageLoaded();
         WebKeyWord.setText(ObjectUtil.getLocator("TXT_USERNAME"), user, ObjectUtil.getElementNameFromLocator("TXT_USERNAME"));
         WebKeyWord.setText(ObjectUtil.getLocator("TXT_PASSWORD"), password, "PASSWORD");
         WebKeyWord.click(ObjectUtil.getLocator("BTN_SUBMIT"));
     }
+
 }

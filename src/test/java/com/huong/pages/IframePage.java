@@ -2,9 +2,8 @@ package com.huong.pages;
 
 import com.huong.constants.FrameworkConstants;
 import com.huong.driver.DriverManager;
-import com.huong.utils.WebKeyWord;
+import com.huong.utils.WebKeyWordOld;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -12,11 +11,16 @@ import java.time.Duration;
 
 public class IframePage {
 
+    private Object LoginCrm;
+
     public void handleIframe() throws InterruptedException {
         DriverManager.getDriver().get(FrameworkConstants.URL_DEMO_IFRAME);
-        WebKeyWord.waitForPageLoaded();
-
+        WebKeyWordOld.waitForPageLoaded();
+        
         WebKeyWord.sleep(10);
+
+        WebKeyWordOld.sleep(10);
+
         int sizeIframe = DriverManager.getDriver().findElements(By.tagName("iframe")).size();
         System.out.println(sizeIframe);
 

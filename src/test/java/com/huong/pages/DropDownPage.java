@@ -2,9 +2,8 @@ package com.huong.pages;
 
 import com.huong.constants.FrameworkConstants;
 import com.huong.driver.DriverManager;
-import com.huong.utils.WebKeyWord;
+import com.huong.utils.WebKeyWordOld;
 import org.openqa.selenium.By;
-import testobject.ObjectUtil;
 
 public class DropDownPage {
     By DROPDOWN = By.xpath("//span[contains(text(),\"Select a Category\")]");
@@ -14,11 +13,11 @@ public class DropDownPage {
     public void dropdown() throws InterruptedException {
         DriverManager.getDriver().get(FrameworkConstants.URL_DEMO_DROPDOWN);
         Thread.sleep(3000);
-        WebKeyWord.click(DROPDOWN);
+        WebKeyWordOld.click(DROPDOWN);
         Thread.sleep(2000);
-        WebKeyWord.setText(TXT_SEARCH, "Shops");
+        WebKeyWordOld.setText(TXT_SEARCH, "Shops");
         Thread.sleep(2000);
-        WebKeyWord.click(CLICK_VALUE);
+        WebKeyWordOld.click(CLICK_VALUE);
     }
 
 }
